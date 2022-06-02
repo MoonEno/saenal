@@ -7,6 +7,7 @@ import Slide from './Slide';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocation, faMapLocation, faPhone} from '@fortawesome/free-solid-svg-icons'
 import Partners from './Partners';
+import ContactUs from './ContactUs';
 
 export default function Home() {
 
@@ -80,11 +81,11 @@ export default function Home() {
                 </div>
             </section>
             
-            <section className="arrivals" id="arrivals">
+            <section className="partners" id="partners">
                 <Partners />
             </section>
 
-            <section className="team" id="team">
+            <section className="aboutUs" id="aboutUs">
                 <div className="heading">
                     <h1><b style={{color:'#0CB8A5'}}>A</b>bout <b style={{color:'#0CB8A5'}}>U</b>s</h1>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi consequuntur officia beatae distinctio minus optio?</p>
@@ -116,6 +117,29 @@ export default function Home() {
                 </div>
             </section>
 
+            <section className="contactUs" id="contactUs">
+                 <ContactUs />
+            </section>
+
+            <section className="service">
+                <div className="box">
+                    <img src="images/service-1.png" alt="" />
+                    <h3>free shipping</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, fugit?</p>
+                </div>
+
+                <div className="box">
+                    <img src="images/service-2.png" alt="" />
+                    <h3>secure payment</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, fugit?</p>
+                </div>
+
+                <div className="box">
+                    <img src="images/service-3.png" alt="" />
+                    <h3>2/4 support</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, fugit?</p>
+                </div>
+            </section>
         </Fragment>
     )
 }

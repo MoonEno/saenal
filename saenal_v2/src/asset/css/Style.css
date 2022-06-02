@@ -184,7 +184,6 @@ section {
   z-index: 1010;
   height: 100%;
   width: 100%;
-  /* background: url(../images/navbar-bg.png) no-repeat; */
   background-position: center;
   background-size: cover;
   display: -webkit-box;
@@ -231,7 +230,7 @@ section {
   font-size: 4rem;
   text-transform: uppercase;
   color: #fff;
-  font-weight: lighter;
+  font-weight: bold;
 }
 
 .navbar a:hover {
@@ -553,12 +552,12 @@ section {
           transform: scale(1.2);
 }
 
-.team {
+.aboutUs {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, #f5f5f5), color-stop(100.1%, #fff));
   background: linear-gradient(#f5f5f5 100%, #fff 100.1%);
 }
 
-.team .box-container {
+.aboutUs .box-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
@@ -566,35 +565,35 @@ section {
   gap: 2rem;
 }
 
-.team .box-container .box {
+.aboutUs .box-container .box {
   border: 0.2rem solid #222;
   text-align: center;
 }
 
-.team .box-container .box:hover .image img {
+.aboutUs .box-container .box:hover .image img {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 
-.team .box-container .box:hover .image .share {
+.aboutUs .box-container .box:hover .image .share {
   left: 0;
 }
 
-.team .box-container .box .image {
+.aboutUs .box-container .box .image {
   height: 50rem;
   width: 100%;
   position: relative;
   overflow: hidden;
 }
 
-.team .box-container .box .image img {
+.aboutUs .box-container .box .image img {
   height: 100%;
   width: 100%;
   /* -o-object-fit: cover;
      object-fit: cover; */
 }
 
-.team .box-container .box .image .share {
+.aboutUs .box-container .box .image .share {
   position: absolute;
   top: 0;
   left: -8rem;
@@ -614,7 +613,7 @@ section {
   gap: 1rem;
 }
 
-.team .box-container .box .image .share a {
+.aboutUs .box-container .box .image .share a {
   height: 5rem;
   width: 5rem;
   border: 0.2rem solid #fff;
@@ -623,66 +622,66 @@ section {
   line-height: 5rem;
 }
 
-.team .box-container .box .image .share a:hover {
+.aboutUs .box-container .box .image .share a:hover {
   background: #fff;
   color: #222;
 }
 
-.team .box-container .box .content {
+.aboutUs .box-container .box .content {
   border-top: 0.2rem solid #cccccc;
   padding: 1.5rem;
 }
 
-.team .box-container .box .content h3 {
+.aboutUs .box-container .box .content h3 {
   font-size: 2rem;
   color: #222;
 }
 
-.team .box-container .box .content p {
+.aboutUs .box-container .box .content p {
   font-size: 1.5rem;
   color: #e84393;
 }
 
-.arrivals .slide {
+.partners .slide {
   text-align: center;
   background: #fff;
 }
 
-.arrivals .slide:hover .image img {
+.partners .slide:hover .image img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.arrivals .slide .image {
+.partners .slide .image {
   height: 30rem;
   width: 100%;
   overflow: hidden;
 }
 
-.arrivals .slide .image img {
+.partners .slide .image img {
   height: 60%;
   width: 60%;
   -o-object-fit: scale-down;
      object-fit: scale-down;
 }
 
-.arrivals .slide .content {
+.partners .slide .content {
   padding-top: .5rem;
 }
 
-.arrivals .slide .content p {
+.partners .slide .content p {
   font-size: 2rem;
   color: #222;
   line-height: 2;
   padding: .5rem 0;
 }
 
-.arrivals .slide .content .price {
+.partners .slide .content .price {
   font-size: 2rem;
   color: #e84393;
 }
 
-.arrivals .slide .content .price span {
+.partners .slide .content .price span {
   color: #777;
   font-size: 1.5rem;
   text-decoration: line-through;
@@ -787,31 +786,31 @@ section {
   line-height: 2;
 }
 
-.blogs .slide:hover .image img {
+.contactUs .slide:hover .image img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.blogs .slide:hover .image .icons {
+.contactUs .slide:hover .image .icons {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-.blogs .slide .image {
+.contactUs .slide .image {
   height: 30rem;
   width: 100%;
   overflow: hidden;
   position: relative;
 }
 
-.blogs .slide .image img {
+.contactUs .slide .image img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.blogs .slide .image .icons {
+.contactUs .slide .image .icons {
   background: #fff;
   position: absolute;
   bottom: 0;
@@ -833,37 +832,47 @@ section {
   z-index: 10;
 }
 
-.blogs .slide .image .icons a {
+.contactUs .slide .image .icons a {
   font-size: 1.5rem;
   color: #222;
 }
 
-.blogs .slide .image .icons a i {
+.contactUs .slide .image .icons a i {
   color: #e84393;
   padding-right: .5rem;
 }
 
-.blogs .slide .image .icons a:hover {
+.contactUs .slide .image .icons a:hover {
   color: #e84393;
 }
 
-.blogs .slide .content {
+.contactUs .slide .content {
   text-align: center;
   padding: 1.5rem;
 }
 
-.blogs .slide .content h3 {
+.contactUs .slide .content h3 {
   font-size: 2rem;
   color: #222;
 }
 
-.blogs .slide .content p {
+.contactUs .slide .content p {
   padding: 1rem 0;
   line-height: 2;
   color: #777;
   font-size: 1.5rem;
 }
 
+.contactInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactInfo .box{
+  background: #0000000f;
+  padding: 10%;
+}
 .footer {
   background: #f5f5f5;
 }

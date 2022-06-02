@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react"; // basic
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import SwiperCore, {Autoplay, Navigation, Pagination } from "swiper";
 import "swiper/css"; //basic
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -19,8 +19,23 @@ function Partners() {
         <Swiper
                 spaceBetween={80}
                 slidesPerView={5}
-                scrollbar={{ draggable: true }}
-                navigation
+                loop={true}
+                autoplay={{
+                    delay: 1,
+                }}
+                speed= {8000}
+                breakpoints={{
+                    768: {
+                      slidesPerView: 5,
+                    },
+                    500: {
+                        slidesPerView: 3,
+                      },
+                    300: {
+                        slidesPerView: 1,
+                      },
+                  }}
+                  modules={[Autoplay]}
        >
            <SwiperSlide>
                 <div className="swiper-slide slide">
