@@ -8,7 +8,6 @@ function Content() {
   return (
     <Fragment>
         <Home />
-
     </Fragment>
   )
 }

@@ -4,6 +4,7 @@ import './asset/css/App.css';
 import './asset/css/Style.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import * as _ from 'lodash';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

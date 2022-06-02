@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faHeart, faSearch, faShoppingCart, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faHeart, faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import mainLogos from '../../asset/images/saenal.png';
 
 export default function Navigation() {
@@ -16,10 +16,7 @@ export default function Navigation() {
             <FontAwesomeIcon icon={faSearch} size="2x"/>
         </form>
 
-        <div className="icons">
-            <div id="search-btn">
-                <FontAwesomeIcon icon={faSearch} size="lg" />
-            </div>
+        <div className="icons" style={{display: 'flex'}}>
             <div id="menu-btn">
                 <FontAwesomeIcon icon={faBars} size="lg" />
             </div>
@@ -30,16 +27,6 @@ export default function Navigation() {
                 <FontAwesomeIcon icon={faShoppingCart} size="lg"/>
             </a>
         </div>
-
-        <nav className="navbar">
-            <div id="close-navbar">
-                <FontAwesomeIcon icon={faTimes} size="lg"/>
-            </div>
-            <a href="#home">Home</a>
-            <a href="#shop">About us</a>
-            <a href="#gallery">Product</a>
-            <a href="#team">Contact Us</a>
-        </nav>
     </header>
   )
 }
