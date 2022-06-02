@@ -75,7 +75,9 @@ section {
 }
 
 .__react_modal_image__medium_img {
-  background-color :rgba(255, 255, 255, 0.3) !important;
+  max-width: 85% !important;
+  max-height: 85% !important;
+  background-color :rgba(0, 0, 0, 0.0) !important;
 }
 
 @-webkit-keyframes fadeUp {
@@ -1047,6 +1049,12 @@ section {
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+
+  .__react_modal_image__medium_img {
+    max-width: 150% !important;
+    max-height: 150% !important;
+    
   }
 }
 /*# sourceMappingURL=style.css.map */
