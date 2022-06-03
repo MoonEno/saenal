@@ -40,7 +40,6 @@ function ContactUs() {
     }
 
     const submit = () => {
-        console.log("inputs", inputs);
         
     }
 

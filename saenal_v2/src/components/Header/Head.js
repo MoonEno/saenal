@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes, faBars, faHeart, faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-import mainLogos from '../../asset/images/saenal.png';
+import mainLogos from '../../asset/images/saenal_symbol.png';
 
 function Head() {
 
@@ -33,12 +33,12 @@ function Head() {
                 <div id="menu-btn" onClick={() => menuBtnClick()}>
                     <FontAwesomeIcon icon={faBars} size="lg" />
                 </div>
-                <a href='#'>
+                {/* <a href='#'>
                     <FontAwesomeIcon icon={faHeart} size="lg"/>
                 </a>
                 <a href='#'>
                     <FontAwesomeIcon icon={faShoppingCart} size="lg"/>
-                </a>
+                </a> */}
             </div>
         </header>
         <nav className="navbar"  style={{backgroundImage: `linear-gradient(rgba(0, 0, 255, 0.8), rgba(255, 255, 0, 0.5)),

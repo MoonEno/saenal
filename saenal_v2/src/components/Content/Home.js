@@ -5,9 +5,11 @@ import CategoryBox from './CategoryBox';
 import Gallery from './Gallery';
 import Slide from './Slide';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocation, faMapLocation, faPhone} from '@fortawesome/free-solid-svg-icons'
+import {faMapLocation, faPhone} from '@fortawesome/free-solid-svg-icons'
 import Partners from './Partners';
 import ContactUs from './ContactUs';
+import Chart from './Chart';
+
 
 export default function Home() {
 
@@ -48,6 +50,10 @@ export default function Home() {
         }
     }
 
+    const clickCategoryBox = (num) => {
+        setCurIdx(num-1);
+    }
+
     const companyLocate = () => {
         console.log("locate");
     }
@@ -63,7 +69,7 @@ export default function Home() {
             </section>
             <section className="category" style={{paddingLeft: '5%', paddingRight: '5%'}}>
                 {dataList.map((content, idx) => (
-                    <CategoryBox content={content} key={idx}/>
+                    <CategoryBox content={content} key={idx} clickCategoryBox={clickCategoryBox} curIdx = {curIdx}/>
                 ))}
             </section>
             <section className="gallery" id="gallery">
@@ -72,12 +78,12 @@ export default function Home() {
             <section className="about" id="about" style={{backgroundImage: `url('/images/about-bg.jpg')`}}>
                 <div className="content">
                     <span>
-                        <b style={{fontSize:'8rem'}}>SAENAL</b>  <br></br> 
-                        <b style={{color:'#0CB8A5'}}>D</b>ESIGN &  <b style={{color:'#0CB8A5'}}>P</b>RINTING
+                        <b style={{fontSize:'8rem' , color:'white'}}>SAENAL</b>  <br></br> 
+                        <b style={{color:'#0CB8A5'}}>D</b><font style={{color:'white'}}>ESIGN &</font>  <b style={{color:'#0CB8A5'}}>P</b><font style={{color:'white'}}>RINTING</font>
                      </span>
-                    <h3>협업의 가치</h3> 
-                    <p> 처음에는 우리가 습관을 만들지만 <br/> 그 다음에는 습관이 우리를 만듭니다</p>
-                    <a href="#" className="btn">read more</a>
+                    {/* <h3>협업의 가치</h3> 
+                    <p> 처음에는 우리가 습관을 만들지만 <br/> 그 다음에는 습관이 우리를 만듭니다</p> */}
+                    {/* <a href="#" className="btn">read more</a> */}
                 </div>
             </section>
             
@@ -92,13 +98,7 @@ export default function Home() {
                 </div>
                 <div className="box-container">
                     <div className="box"  style={{border: '0rem'}}>
-                        <div className="image" style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
-                            <img src="/images/saenal_symbol.png" alt="" style={{maxHeight:'60%', maxWidth: '60%'}}/>
-                        </div>
-                        <div className="content">
-                            <h3>(주)새날기획</h3>
-                            <p style={{color: '#0CB8A5'}}>SAENAL DESIGN & PRINTING</p>
-                        </div>
+                       <Chart />
                     </div>
                     <div className="box" style={{border: '0rem'}}>
                         <div className="image">
@@ -121,7 +121,7 @@ export default function Home() {
                  <ContactUs />
             </section>
 
-            <section className="service">
+            {/* <section className="service">
                 <div className="box">
                     <img src="images/service-1.png" alt="" />
                     <h3>free shipping</h3>
@@ -139,7 +139,7 @@ export default function Home() {
                     <h3>2/4 support</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, fugit?</p>
                 </div>
-            </section>
+            </section> */}
         </Fragment>
     )
 }

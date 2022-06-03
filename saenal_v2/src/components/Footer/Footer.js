@@ -34,7 +34,7 @@ function Footer() {
           </div>
       </div>
 
-      <div className="credit"> created by <span>Mooneknow@gmail.com </span> | it's present! </div>
+      <div className="credit"> created by <span className='developer'> MOON </span> | it's present! </div>
 </section>
   )
 }

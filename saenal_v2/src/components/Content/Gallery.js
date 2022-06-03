@@ -19,12 +19,11 @@ function Gallery({item}) {
        
     }, [item])
 
-    
 
     return (
         <Fragment>
             <div className="heading">
-                <h1>세부사진</h1>
+                <h1><b style={{color:'#0CB8A5'}}>D</b>etail</h1>
                 <p></p>
             </div>
 
@@ -35,6 +34,7 @@ function Gallery({item}) {
                                     small={subImg}
                                     medium={subImg}
                                     large={subImg}
+                                    hideDownload
                         />
                     </div>
                 ))}

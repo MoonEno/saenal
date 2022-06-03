@@ -1,9 +1,9 @@
 import React from 'react'
 
-function CategoryBox({content}) {
+function CategoryBox({content, clickCategoryBox, curIdx}) {
 
   return (
-    <a href="#" className="box">
+    <a className={'box ' + (curIdx === (content.order-1) ? 'active':'')} onClick={()=> clickCategoryBox(content.order)}>
         <img src={content.icon} alt="" />
         <p>{content.category}</p>
     </a>
