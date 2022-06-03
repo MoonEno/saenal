@@ -9,6 +9,7 @@ import {faMapLocation, faPhone} from '@fortawesome/free-solid-svg-icons'
 import Partners from './Partners';
 import ContactUs from './ContactUs';
 import Chart from './Chart';
+import Motion from './Motion';
 
 
 export default function Home() {
@@ -98,7 +99,7 @@ export default function Home() {
                 </div>
                 <div className="box-container">
                     <div className="box"  style={{border: '0rem'}}>
-                       <Chart />
+                       <Motion />
                     </div>
                     <div className="box" style={{border: '0rem'}}>
                         <div className="image">
