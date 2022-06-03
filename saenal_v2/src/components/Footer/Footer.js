@@ -17,9 +17,9 @@ function Footer() {
           <div className="box">
               <h3>Contact Info</h3>
               <p> <i className="fas fa-phone"></i> +123-456-7890 </p>
-              <p> <i className="fas fa-phone"></i> +02-724-5512 </p>
+              <p> <i className="fas fa-phone"></i> +02-2689-0752 </p>
               <p> <i className="fas fa-envelope"></i> saenal@naver.com </p>
-              <p> <i className="fas fa-map"></i> 경기 광명시 일직로 43 GIDC B동 403-404호 (14353) </p>
+              <p> <i className="fas fa-map"></i> 경기 광명시 일직로 43 GIDC B동 403-404호 (우: 14353) </p>
               <div className="share">
                   <a href="#" className="fab fa-facebook-f"></a>
                   <a href="#" className="fab fa-twitter"></a>
