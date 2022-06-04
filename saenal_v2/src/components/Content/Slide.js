@@ -17,7 +17,7 @@ Slide({item, changeIdx}) {
     return (
         <div className="slide active">
             <div className="content">
-                <img src={`images/content-img-${item.order}.png`} alt="" />
+                <img src={`images/content-img-${item.order || 1}.png`} alt="" />
                 <h3>{curItem.category}</h3>
                 <span>{curItem.desc}</span>
                 {/* <a href="#" className="btn">read more</a> */}
