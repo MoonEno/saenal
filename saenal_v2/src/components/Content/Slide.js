@@ -9,6 +9,7 @@ Slide({item, changeIdx}) {
 
     useEffect(() => {
         if (typeof item === 'object'){
+            console.log("item", item)
             setCurItem(item);
         }
     }, [item]);
@@ -16,7 +17,7 @@ Slide({item, changeIdx}) {
     return (
         <div className="slide active">
             <div className="content">
-                <img src="images/content-img-1.png" alt="" />
+                <img src={`images/content-img-${item.order}.png`} alt="" />
                 <h3>{curItem.category}</h3>
                 <span>{curItem.desc}</span>
                 {/* <a href="#" className="btn">read more</a> */}
