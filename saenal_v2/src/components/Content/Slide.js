@@ -19,7 +19,7 @@ Slide({item, changeIdx}) {
                 <img src="images/content-img-1.png" alt="" />
                 <h3>{curItem.category}</h3>
                 <span>{curItem.desc}</span>
-                <a href="#" className="btn">read more</a>
+                {/* <a href="#" className="btn">read more</a> */}
                 <div className="controls" style={{display: 'flex'}}>
                     <div onClick={() => changeIdx(-1)}>
                         <FontAwesomeIcon icon={faAngleLeft} />

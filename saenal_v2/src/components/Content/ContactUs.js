@@ -7,6 +7,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
 
 function ContactUs() {
@@ -56,7 +57,7 @@ function ContactUs() {
                 <div className='box'>
                 <Grid container spacing={3}>
                     <Grid item xs={12}>
-                        <FormControl variant="standard" sx={{ m: 1, minWidth: 220 }}>
+                        <FormControl variant="standard" sx={{ minWidth: 220 }} style={{width:'50%' }}>
                             <InputLabel id="demo-simple-select-standard-label">문의내용</InputLabel>
                             <Select
                                     fullWidth
@@ -64,13 +65,14 @@ function ContactUs() {
                                     id="demo-simple-select-standard"
                                     name="category"
                                     label="문의내용"
+                                    style={{height: 80, fontSize: '15px'}}
                             >
                                     <MenuItem value=""><em>문의내용</em></MenuItem>
                                     <MenuItem value="상담">상담</MenuItem>
-                                    <MenuItem value="가격문의">가격문의</MenuItem>
-                                    <MenuItem value="위치문의">위치문의</MenuItem>
-                                    <MenuItem value="디자인시안">디자인시안</MenuItem>
-                                    <MenuItem value="점심메뉴">점심메뉴</MenuItem>
+                                    <MenuItem value="작업의뢰">작업의뢰</MenuItem>
+                                    <MenuItem value="방문문의">방문문의</MenuItem>
+                                    <MenuItem value="디자인문의">디자인문의</MenuItem>
+                                    
                             </Select>
                         </FormControl>
                     </Grid>
@@ -79,10 +81,13 @@ function ContactUs() {
                         required
                         id="userName"
                         name="userName"
-                        label="이름"
+                        label="이름/업체명"
                         fullWidth
                         variant="outlined"
                         onChange={onChange}
+                        InputProps={{
+                                style: {height: '70px', fontSize: '20px'}
+                        }}
                     />
                     </Grid>
                     <Grid item xs={12} spacing={5}>
@@ -94,6 +99,9 @@ function ContactUs() {
                         fullWidth
                         variant="outlined"
                         onChange={onChange}
+                        InputProps={{
+                            style: {height: '70px', fontSize: '20px'}
+                    }}
                     />
                     </Grid>
                     <Grid item xs={12} spacing={5}>
@@ -101,10 +109,13 @@ function ContactUs() {
                         required
                         id="userPhone"
                         name="userPhone"
-                        label="전화번호"
+                        label="연락처"
                         fullWidth
                         variant="outlined"
                         onChange={onChange}
+                        InputProps={{
+                            style: {height: '70px', fontSize: '20px'}
+                    }}
                     />
                     </Grid>
                     <Grid item xs={12}>
@@ -117,17 +128,26 @@ function ContactUs() {
                                 fullWidth
                                 placeholder='내용을 입력하세요'
                                 onChange={onChange}
+                                InputProps={{
+                                    style: {fontSize: '15px'}
+                            }}
                     />
                     </Grid>
                     <Grid item xs={12}>
                     <FormControlLabel
                         control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
-                        label="개인정보 활용에 동의합니다."
+                        size="large"
+                        label={ <Box component="div" fontSize={15}>
+                                    개인정보활용에 동의합니다.
+                                </Box>}
                     />
-                    <Button variant="contained" color="success" size='large' onClick={() => submit()}>
-                        문의하기
+                    </Grid>
+                    <Grid item xs={12}>
+                    <Button variant="contained" color="success" size='large' onClick={() => submit()} style={{width:'50%', height:'60px',  backgroundColor: "#0CB8A5"}}>
+                        <p style={{fontSize:'17px'}}>문의하기</p>
                     </Button>
                     </Grid>
+                    
                 </Grid>
                 </div>
             </div>

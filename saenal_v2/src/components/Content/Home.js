@@ -76,10 +76,10 @@ export default function Home() {
             <section className="gallery" id="gallery">
                 <Gallery item={item} />
             </section>
-            <section className="about" id="about" style={{backgroundImage: `url('/images/about-bg.jpg')`}}>
+            <section className="about" id="about" style={{backgroundImage: `url('/images/about-bg.png')`}}>
                 <div className="content">
                     <span>
-                        <b style={{fontSize:'8rem' , color:'white'}}>SAENAL</b>  <br></br> 
+                        <b style={{fontSize:'11rem' , color:'white'}}>SAENAL</b>  <br></br> 
                         <b style={{color:'#0CB8A5'}}>D</b><font style={{color:'white'}}>ESIGN &</font>  <b style={{color:'#0CB8A5'}}>P</b><font style={{color:'white'}}>RINTING</font>
                      </span>
                     {/* <h3>협업의 가치</h3> 
@@ -95,7 +95,7 @@ export default function Home() {
             <section className="aboutUs" id="aboutUs">
                 <div className="heading">
                     <h1><b style={{color:'#0CB8A5'}}>A</b>bout <b style={{color:'#0CB8A5'}}>U</b>s</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi consequuntur officia beatae distinctio minus optio?</p>
+                    {/* <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi consequuntur officia beatae distinctio minus optio?</p> */}
                 </div>
                 <div className="box-container">
                     <div className="box"  style={{border: '0rem'}}>

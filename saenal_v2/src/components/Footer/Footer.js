@@ -1,4 +1,7 @@
 import React from 'react'
+import logo from '../../asset/images/saenal.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faEnvelope, faMapLocation, faPhone} from '@fortawesome/free-solid-svg-icons'
 
 function Footer() {
   return (
@@ -15,23 +18,27 @@ function Footer() {
           </div>
 
           <div className="box">
+            <div style={{maxHeight: '265px'}}>
+              <img src={logo} style={{width: '100%' , height:'100%', opacity: 0.7}}/>
+            </div>
+          </div>
+
+          <div className="box">
               <h3>Contact Info</h3>
-              <p> <i className="fas fa-phone"></i> +123-456-7890 </p>
-              <p> <i className="fas fa-phone"></i> +02-2689-0752 </p>
-              <p> <i className="fas fa-envelope"></i> saenal@naver.com </p>
-              <p> <i className="fas fa-map"></i> 경기 광명시 일직로 43 GIDC B동 403-404호 (우: 14353) </p>
-              <div className="share">
+              <p> </p>
+              <p> </p>
+              <p> <FontAwesomeIcon icon={faPhone} /> +02-2689-0752 </p>
+              <p> <FontAwesomeIcon icon={faEnvelope} /> snad0752@hanmail.net </p>
+              <p> <FontAwesomeIcon icon={faMapLocation} /> 경기 광명시 일직로 43, GIDC광명역 B동 403-404호 (우: 14353) </p>
+              {/* <div className="share">
                   <a href="#" className="fab fa-facebook-f"></a>
                   <a href="#" className="fab fa-twitter"></a>
                   <a href="#" className="fab fa-instagram"></a>
                   <a href="#" className="fab fa-linkedin"></a>
-              </div>
+              </div> */}
           </div>
 
-          <div className="box">
-              <h3>Letters</h3>
-              <p>subscribe for latest updates</p>
-          </div>
+      
       </div>
 
       <div className="credit"> created by <span className='developer'> MOON </span> | it's present! </div>

@@ -413,24 +413,22 @@ section {
 
 
 .about .content {
-  opacity: 0.8;
-  border-radius: 8%;
   width: 55rem;
-  background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+  /* background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
   linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-  linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+  linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%); */
   padding: 3rem;
 }
 
 .about .content span {
   color: black;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 .about .content h3 {
   padding-top: 1rem;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #222;
 }
 
@@ -608,7 +606,7 @@ section {
 
 .aboutUs .box-container .box .image img {
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
   /* -o-object-fit: cover;
      object-fit: cover; */
 }

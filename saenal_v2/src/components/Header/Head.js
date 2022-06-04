@@ -41,8 +41,7 @@ function Head() {
                 </a> */}
             </div>
         </header>
-        <nav className="navbar"  style={{backgroundImage: `linear-gradient(rgba(0, 0, 255, 0.8), rgba(255, 255, 0, 0.5)),
-          url('/images/navbar-bg1.png')`}}>
+        <nav className="navbar"  style={{backgroundImage: `url('/images/navbar-bg.png')`}}>
             <div id="close-navbar" onClick={() => menuBtnClose()}>
                 <FontAwesomeIcon icon={faTimes} size="lg"/>
             </div>

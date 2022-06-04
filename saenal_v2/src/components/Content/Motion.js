@@ -24,8 +24,8 @@ function Motion() {
             scene.add(gltf.scene);
             function animate() {
                 requestAnimationFrame(animate);
-                gltf.scene.rotation.y -= 0.01;
-                gltf.scene.rotation.x += 0.02;
+                gltf.scene.rotation.y -= 0.005;
+                gltf.scene.rotation.x += 0.002;
                 renderer.render(scene, camera);
             }
             animate();
