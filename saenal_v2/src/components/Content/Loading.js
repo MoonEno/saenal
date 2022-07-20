@@ -1,5 +1,4 @@
 import React from 'react';
-import Lottie from 'react-lottie';
 import * as loading from '../../asset/json/loading.json';
 import * as done from '../../asset/json/done.json';
 
@@ -24,10 +23,7 @@ const defaultOptions = {
 const Loading = ({loading}) => {
   return (
     <div>
-        {!loading ? 
-         (<Lottie options={defaultOptions} height={100} width= {100} />) :
-         (<Lottie options={defaultOptions2} height={100} width= {100} />)}
-        
+      
     </div>
   )
 }

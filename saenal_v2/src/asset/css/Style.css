@@ -35,6 +35,35 @@ section {
   padding: 5rem 9%;
 }
 
+.randingZone {
+  position:absolute;
+  height:100%;
+  width:100%;
+  overflow: hidden;
+}
+
+.randingBackDiv {
+  background-color: black;
+  object-fit: cover;
+  opacity: 0.5;
+  min-height: 100%;
+  min-width: 100%;
+  z-index: 1;
+}
+
+.randingZone video {
+  z-index: 0;
+  object-fit: cover;
+}
+
+
+.randingButton {
+  position: fixed;
+  bottom: 15%;
+  left: 50%;
+  z-index: 2;
+}
+
 .btn {
   display: inline-block;
   margin-top: 1rem;
