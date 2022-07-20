@@ -16,13 +16,13 @@ function App() {
   useEffect(() => {
     let v = document.getElementById("randingVideo");
     if (v) {
-      v.playbackRate = 0.35;
+      v.playbackRate = 0.5;
     }
   }, []);
 
 
   const goEnter = () => {
-      console.log("Heree");
+    setEndterFlag(true);
   }
 
   
@@ -36,12 +36,12 @@ function App() {
             <Footer />
       </div>
       : <div className='randingZone'>
-          <div className='randingBackDiv'>
-          </div>
-          <div className='randingV'>
+            <div className='randingBackDiv'>
+            </div>
+
             <video ref={videoRef} id="randingVideo" src='/video/randing.mp4' autoPlay muted ></video>
-          </div>
-          <div className='randingButton'><button onClick={()=> goEnter()}>123</button></div>
+
+            <div className='randingButton'><button className="glow-on-hover" type="button" onClick={()=> goEnter()}>들어가기</button></div>
         </div>
       }
     
