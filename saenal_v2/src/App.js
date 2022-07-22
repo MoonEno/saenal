@@ -20,8 +20,11 @@ function App() {
     if (v) {
       v.playbackRate = 0.7;
     }
+    if (!enterFlag) {
+      setTimeout(()=>{ setEndterFlag(true) }, 25000);
+    }
+    
   }, []);
-
 
   const goEnter = () => {
     setEndterFlag(true);
@@ -46,16 +49,18 @@ function App() {
             <div className='randingButton' onClick={()=> goEnter()}>
               <Typed
                     strings={[
-                      "pursue for Togeter",
+                      "pursue for Together",
                       "pursue for Trust",
                       "pursue for Quality",
                       "pursue for Design",
                       "SAENAL DESIGN",
-                      "ENTER"
+                      "3",
+                      "2",
+                      "1",
+                      "GO!",
                     ]}
                     typeSpeed={130}
                     backSpeed={80}
-
                   >
                 </Typed>
              </div>
