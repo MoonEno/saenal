@@ -2,6 +2,8 @@ import { Fragment, useEffect, useRef, useState } from 'react';
 import Content from './components/Content/Content';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Head';
+import Typed from "react-typed";
+import { Button } from '@mui/material';
 
 
 
@@ -16,7 +18,7 @@ function App() {
   useEffect(() => {
     let v = document.getElementById("randingVideo");
     if (v) {
-      v.playbackRate = 0.5;
+      v.playbackRate = 0.7;
     }
   }, []);
 
@@ -39,9 +41,25 @@ function App() {
             <div className='randingBackDiv'>
             </div>
 
-            <video ref={videoRef} id="randingVideo" src='/video/randing.mp4' autoPlay muted ></video>
+            <video ref={videoRef} id="randingVideo" src='/video/randing.mp4' autoPlay muted loop></video>
 
-            <div className='randingButton'><button className="glow-on-hover" type="button" onClick={()=> goEnter()}>들어가기</button></div>
+            <div className='randingButton' onClick={()=> goEnter()}>
+              <Typed
+                    strings={[
+                      "pursue for Togeter",
+                      "pursue for Trust",
+                      "pursue for Quality",
+                      "pursue for Design",
+                      "SAENAL DESIGN",
+                      "ENTER"
+                    ]}
+                    typeSpeed={130}
+                    backSpeed={80}
+
+                  >
+                </Typed>
+             </div>
+            {/* <button className="glow-on-hover" type="button" onClick={()=> goEnter()}>들어가기</button> */}
         </div>
       }
     
