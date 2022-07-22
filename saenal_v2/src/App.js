@@ -21,7 +21,7 @@ function App() {
       v.playbackRate = 0.7;
     }
     if (!enterFlag) {
-      setTimeout(()=>{ setEndterFlag(true) }, 25000);
+      setTimeout(()=>{ setEndterFlag(true) }, 20000);
     }
     
   }, []);
@@ -40,13 +40,13 @@ function App() {
             <Content />
             <Footer />
       </div>
-      : <div className='randingZone'>
+      : <div className='randingZone' onClick={()=> goEnter()}>
             <div className='randingBackDiv'>
             </div>
 
             <video ref={videoRef} id="randingVideo" src='/video/randing.mp4' autoPlay muted loop></video>
 
-            <div className='randingButton' onClick={()=> goEnter()}>
+            <div className='randingButton'>
               <Typed
                     strings={[
                       "pursue for Together",
@@ -54,10 +54,6 @@ function App() {
                       "pursue for Quality",
                       "pursue for Design",
                       "SAENAL DESIGN",
-                      "3",
-                      "2",
-                      "1",
-                      "GO!",
                     ]}
                     typeSpeed={130}
                     backSpeed={80}
