@@ -95,7 +95,7 @@ export default function Home() {
             <section className="aboutUs" id="aboutUs">
                 <div className="heading">
                     <h1><b style={{color:'#0CB8A5'}}>A</b>bout <b style={{color:'#0CB8A5'}}>U</b>s</h1>
-                    <p>We pursue the value of living together. <br></br> A new day will come, if we live together rather than the profit of the moment.</p>
+                    <p>We pursue the value of living together. <br/> A new day will come, if we live together rather than the profit of the moment.</p>
                 </div>
                 <div className="box-container">
                     <div className="box"  style={{border: '0rem'}}>

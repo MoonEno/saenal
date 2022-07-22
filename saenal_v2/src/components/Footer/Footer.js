@@ -12,14 +12,14 @@ function Footer() {
               <h3>Quick Menu</h3>
               <a className="link" href="#home"> <i className="fas fa-angle-right"></i> home</a>
               <a className="link" href="#gallery"> <i className="fas fa-angle-right"></i> gallery</a>
-              <a className="link" href="#team"> <i className="fas fa-angle-right"></i> team</a>
+              {/* <a className="link" href="#team"> <i className="fas fa-angle-right"></i> team</a> */}
               <a className="link" href="#aboutUs"> <i className="fas fa-angle-right"></i> About Us</a>
               <a className="link" href="#contactUs"> <i className="fas fa-angle-right"></i> Contact Us</a>
           </div>
 
           <div className="box">
             <div style={{maxHeight: '265px'}}>
-              <img src={logo} style={{width: '100%' , height:'100%', opacity: 0.7}}/>
+              <img src={logo} style={{width: '50%' , marginTop: '20%' , opacity: 0.7}}/>
             </div>
           </div>
 
@@ -41,7 +41,7 @@ function Footer() {
       
       </div>
 
-      <div className="credit"> created by <span className='developer'> MOON </span> | it's present! </div>
+      <div className="credit"> <span className='developer'> created by  915 </span></div>
 </section>
   )
 }

@@ -9,18 +9,19 @@ import Checkbox from '@mui/material/Checkbox';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
+import emailjs from '@emailjs/browser';
 
 function ContactUs() {
 
     const [inputs, setInputs] = useState({
         category: '',
-        userName: '',
-        userEmail: '',
-        userPhone: '',
-        content: '',
+        who: '',
+        email: '',
+        phone: '',
+        contents: '',
     });
 
-    const { userName, userEmail, userPhone, content } = inputs;
+    const { category, who, email, phone, contents } = inputs;
 
     const onChange = (e) => {
         const { value, name } = e.target;
@@ -33,25 +34,51 @@ function ContactUs() {
     const onDataReset = () => {
         setInputs({
             category: '',
-            userName: '',
-            userEmail: '',
-            userPhone: '',
-            content: '',
+            who: '',
+            email: '',
+            phone: '',
+            contents: '',
         });
     }
 
     const submit = () => {
-        
+
+        for (let [k, v] of Object.entries(inputs)) {
+            if (!v) {
+                switch (k) {
+                    case 'category' : alert ('카테고리를 선택해 주세요.'); return;
+                    case 'who' : alert('이름/업체명을 작성해 주세요.'); return;
+                    case 'email': alert('이메일을 적어주세요.'); return;
+                    case 'phone': alert('연락처를 적어주세요.'); return;
+                    case 'contents' : alert('문의내용을 적어주세요.'); return;
+                }
+
+                return ;
+            }
+
+          
+        }
+
+        emailjs.send('service_iy9egq9', 'template_g7p7e5q', inputs, 'CRWPb5VMd1e7bE7GL').then((res) => {
+            if (res.status === 200) {
+                alert("정상적으로 접수되었습니다. 감사합니다.");
+                onDataReset();
+            }
+        });
     }
 
-
-
+    const handleChange = (event) => {
+        setInputs({
+            ...inputs,
+            ["category"] : event.target.value
+        });
+    }
 
     return (
         <Fragment>
             <div className="heading">
                 <h1><b style={{color:'#0CB8A5'}}>C</b>ontact <b style={{color:'#0CB8A5'}}>U</b>s</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi consequuntur officia beatae distinctio minus optio?</p>
+                {/* <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi consequuntur officia beatae distinctio minus optio?</p> */}
             </div>
             <div className='contactInfo'>
                 <div className='box'>
@@ -64,14 +91,16 @@ function ContactUs() {
                                     labelId="demo-simple-select-standard-label"
                                     id="demo-simple-select-standard"
                                     name="category"
+                                    value={category}
                                     label="문의내용"
                                     style={{height: 80, fontSize: '15px'}}
+                                    onChange = {handleChange}
                             >
                                     <MenuItem value=""><em>문의내용</em></MenuItem>
-                                    <MenuItem value="상담">상담</MenuItem>
-                                    <MenuItem value="작업의뢰">작업의뢰</MenuItem>
-                                    <MenuItem value="방문문의">방문문의</MenuItem>
-                                    <MenuItem value="디자인문의">디자인문의</MenuItem>
+                                    <MenuItem value={"상담"}>상담</MenuItem>
+                                    <MenuItem value={"작업의뢰"}>작업의뢰</MenuItem>
+                                    <MenuItem value={"방문문의"}>방문문의</MenuItem>
+                                    <MenuItem value={"디자인문의"}>디자인문의</MenuItem>
                                     
                             </Select>
                         </FormControl>
@@ -79,12 +108,13 @@ function ContactUs() {
                     <Grid item xs={12} spacing={5}>
                     <TextField
                         required
-                        id="userName"
-                        name="userName"
+                        id="who"
+                        name="who"
                         label="이름/업체명"
                         fullWidth
                         variant="outlined"
                         onChange={onChange}
+                        value={who}
                         InputProps={{
                                 style: {height: '70px', fontSize: '20px'}
                         }}
@@ -93,12 +123,13 @@ function ContactUs() {
                     <Grid item xs={12} spacing={5}>
                     <TextField
                         required
-                        id="userEmail"
-                        name="userEmail"
+                        id="email"
+                        name="email"
                         label="이메일"
                         fullWidth
                         variant="outlined"
                         onChange={onChange}
+                        value={email}
                         InputProps={{
                             style: {height: '70px', fontSize: '20px'}
                     }}
@@ -107,12 +138,13 @@ function ContactUs() {
                     <Grid item xs={12} spacing={5}>
                     <TextField
                         required
-                        id="userPhone"
-                        name="userPhone"
+                        id="phone"
+                        name="phone"
                         label="연락처"
                         fullWidth
                         variant="outlined"
                         onChange={onChange}
+                        value={phone}
                         InputProps={{
                             style: {height: '70px', fontSize: '20px'}
                     }}
@@ -120,20 +152,21 @@ function ContactUs() {
                     </Grid>
                     <Grid item xs={12}>
                     <TextField
-                                id="content"
-                                name="content"
+                                id="contents"
+                                name="contents"
                                 label="내용"
                                 multiline
                                 rows={8}
                                 fullWidth
                                 placeholder='내용을 입력하세요'
                                 onChange={onChange}
+                                value={contents}
                                 InputProps={{
                                     style: {fontSize: '15px'}
                             }}
                     />
                     </Grid>
-                    <Grid item xs={12}>
+                    {/* <Grid item xs={12}>
                     <FormControlLabel
                         control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
                         size="large"
@@ -141,7 +174,7 @@ function ContactUs() {
                                     개인정보활용에 동의합니다.
                                 </Box>}
                     />
-                    </Grid>
+                    </Grid> */}
                     <Grid item xs={12}>
                     <Button variant="contained" color="success" size='large' onClick={() => submit()} style={{width:'50%', height:'60px',  backgroundColor: "#0CB8A5"}}>
                         <p style={{fontSize:'17px'}}>문의하기</p>
