@@ -23,6 +23,7 @@
     "react-dom": "^18.1.0",
     "react-modal-image": "^2.5.0",
     "react-scripts": "5.0.1",
+    "react-toastify": "^9.0.7",
     "react-typed": "^1.0.9",
     "react-typist": "^2.0.5",
     "recharts": "^2.1.10",

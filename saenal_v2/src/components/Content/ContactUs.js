@@ -4,12 +4,12 @@ import InputLabel from '@mui/material/InputLabel';
 import TextField from '@mui/material/TextField';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
 import emailjs from '@emailjs/browser';
+
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function ContactUs() {
 
@@ -43,25 +43,37 @@ function ContactUs() {
 
     const submit = () => {
 
+        let msg = '';
+        console.log("haa");
+        
         for (let [k, v] of Object.entries(inputs)) {
             if (!v) {
+                console.log("Aa");
                 switch (k) {
-                    case 'category' : alert ('카테고리를 선택해 주세요.'); return;
-                    case 'who' : alert('이름/업체명을 작성해 주세요.'); return;
-                    case 'email': alert('이메일을 적어주세요.'); return;
-                    case 'phone': alert('연락처를 적어주세요.'); return;
-                    case 'contents' : alert('문의내용을 적어주세요.'); return;
+                    case 'category' : msg ='카테고리를 선택해 주세요.' ; break;
+                    case 'who' : msg = '이름/업체명을 작성해 주세요.'; break;
+                    case 'email': msg = '이메일을 적어주세요.'; break;
+                    case 'phone': msg = '연락처를 적어주세요.'; break;
+                    case 'contents' : msg = '문의내용을 적어주세요.'; break;
                 }
 
+
+                console.log("error", msg);
+                toast.error(msg , {
+                    position : toast.POSITION.TOP_CENTER,
+                    hideProgressBar : true
+                });
                 return ;
             }
-
-          
+            console.log("????");
         }
 
         emailjs.send('service_iy9egq9', 'template_g7p7e5q', inputs, 'CRWPb5VMd1e7bE7GL').then((res) => {
             if (res.status === 200) {
-                alert("정상적으로 접수되었습니다. 감사합니다.");
+                toast.success("정상적으로 접수되었습니다. 감사합니다.", {
+                    position : toast.POSITION.TOP_CENTER,
+                    hideProgressBar : true,
+                });
                 onDataReset();
             }
         });
@@ -184,6 +196,7 @@ function ContactUs() {
                 </Grid>
                 </div>
             </div>
+            <ToastContainer style={{marginTop: '7%', fontSize: '1.5rem', fontWeight: '700' }} autoClose="1500" />
 
         </Fragment>
     )
