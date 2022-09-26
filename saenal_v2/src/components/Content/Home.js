@@ -98,9 +98,9 @@ export default function Home() {
                     <p>We pursue the value of living together. <br/> A new day will come, if we live together rather than the profit of the moment.</p>
                 </div>
                 <div className="box-container">
-                    <div className="box"  style={{border: '0rem'}}>
+                    {/* <div className="box"  style={{border: '0rem'}}>
                        <Motion />
-                    </div>
+                    </div> */}
                     <div className="box" style={{border: '0rem'}}>
                         <div className="image">
                             <img src="/images/map.png" alt=""/>

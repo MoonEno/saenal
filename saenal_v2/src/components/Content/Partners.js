@@ -13,7 +13,7 @@ function Partners() {
     <Fragment>
         <div className="heading">
             <h1><b style={{color:'#0CB8A5'}}>P</b>artners</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi consequuntur officia beatae distinctio minus optio?</p>
+            {/* <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi consequuntur officia beatae distinctio minus optio?</p> */}
         </div>
 
         <Swiper
