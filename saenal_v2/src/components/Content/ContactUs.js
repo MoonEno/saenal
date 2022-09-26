@@ -90,7 +90,6 @@ function ContactUs() {
         <Fragment>
             <div className="heading">
                 <h1><b style={{color:'#0CB8A5'}}>C</b>ontact <b style={{color:'#0CB8A5'}}>U</b>s</h1>
-                {/* <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi consequuntur officia beatae distinctio minus optio?</p> */}
             </div>
             <div className='contactInfo'>
                 <div className='box'>
