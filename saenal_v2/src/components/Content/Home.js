@@ -76,7 +76,7 @@ export default function Home() {
             <section className="gallery" id="gallery">
                 <Gallery item={item} />
             </section>
-            <section className="about" id="about" style={{backgroundImage: `url('/images/about-bg.png')`}}>
+            <section className="about" id="about" style={{backgroundImage: `url('/images/about-bg2.jpg')`}}>
                 <div className="content">
                     <span>
                         <b style={{fontSize:'11rem' , color:'white'}}>SAENAL</b>  <br></br> 
