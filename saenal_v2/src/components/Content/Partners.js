@@ -67,6 +67,13 @@ function Partners() {
                     </div>
                 </div>
            </SwiperSlide>
+           <SwiperSlide>
+                <div className="swiper-slide slide">
+                    <div className="image">
+                        <img src="images/partners/kbiz.jpg" alt="" />
+                    </div>
+                </div>
+           </SwiperSlide>
 
            <SwiperSlide>
                 <div className="swiper-slide slide">
@@ -96,6 +103,13 @@ function Partners() {
                 <div className="swiper-slide slide">
                     <div className="image">
                         <img src="images/partners/ansan.png" alt="" />
+                    </div>
+                </div>
+           </SwiperSlide>
+           <SwiperSlide>
+                <div className="swiper-slide slide">
+                    <div className="image">
+                        <img src="images/partners/kbiz.jpg" alt="" />
                     </div>
                 </div>
            </SwiperSlide>
