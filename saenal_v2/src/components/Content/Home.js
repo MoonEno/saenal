@@ -105,7 +105,7 @@ export default function Home() {
                         <div className="image">
                             <img src="/images/map.png" alt=""/>
                             <div className="share">
-                                <a href="tel:010-8877-4577"onClick={() => companyCall()}>
+                                <a href="tel:02-2689-0752"onClick={() => companyCall()}>
                                     <FontAwesomeIcon icon={faPhone} size="lg" />
                                 </a>
                                 
